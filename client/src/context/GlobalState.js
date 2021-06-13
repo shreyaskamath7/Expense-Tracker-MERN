@@ -48,7 +48,7 @@ const addtransaction=async (transaction)=>{
         }
     }
     try {
-        const res=await axios.post('https://expensetrackeru.herokuapp.com/api/v1/transaction',transaction,config);
+        const res=await axios.post('/api/v1/transaction',transaction,config);
         dispath({type:'ADD_TRANSACTION',payload:res.data.data});
         
     } catch (err) {
